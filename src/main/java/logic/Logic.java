@@ -10,7 +10,7 @@ import java.io.PrintWriter;
 import java.nio.file.Files;
 
 /**
- * this class contains the logic of FloodPipe game
+ * This class contains the logic of FloodPipe game
  *
  * @author LiChieh Chou
  */
