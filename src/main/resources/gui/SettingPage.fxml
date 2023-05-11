@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.SettingPageController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="43.0" prefWidth="600.0" text="Settings">
+               <font>
+                  <Font size="36.0" />
+               </font></Label>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefWidth="200.0" text="Columns" />
+                  <Slider fx:id="colSlider" blockIncrement="1.0" majorTickUnit="1.0" max="15.0" min="2.0" minorTickCount="0" onKeyReleased="#onSlideKeyReleased" onMouseDragged="#onSlideMouseDragged" onMouseReleased="#onSlideMouseReleased" prefHeight="38.0" prefWidth="200.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="15.0" />
+                  <Label fx:id="labelCol" prefWidth="200.0" textFill="RED" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefWidth="200.0" text="Rows" />
+                  <Slider fx:id="rowSlider" blockIncrement="1.0" majorTickUnit="1.0" max="15.0" min="2.0" minorTickCount="0" onKeyReleased="#onSlideKeyReleased" onMouseDragged="#onSlideMouseDragged" onMouseReleased="#onSlideMouseReleased" prefHeight="38.0" prefWidth="200.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="15.0" />
+                  <Label fx:id="labelRow" prefWidth="200.0" textFill="RED" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefWidth="200.0" text="Percentage of Wall" />
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Slider fx:id="wallSlider" blockIncrement="1.0" majorTickUnit="10.0" minorTickCount="0" onKeyReleased="#onSlideKeyReleased" onMouseDragged="#onSlideMouseDragged" onMouseReleased="#onSlideMouseReleased" prefWidth="200.0" value="50.0" />
+                        <Label fx:id="labelPercentageVal" alignment="CENTER_RIGHT" prefWidth="200.0" text="50%" />
+                     </children>
+                  </VBox>
+                  <Label fx:id="labelWall" prefWidth="200.0" textFill="RED" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefWidth="200.0" text="Speed" />
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Slider fx:id="speedSlider" blockIncrement="2.0" majorTickUnit="2.0" max="21.0" min="1.0" minorTickCount="0" nodeOrientation="LEFT_TO_RIGHT" onKeyReleased="#onSlideKeyReleased" onMouseDragged="#onSlideMouseDragged" onMouseReleased="#onSlideMouseReleased" prefWidth="200.0" showTickMarks="true" snapToTicks="true" value="11.0" />
+                        <HBox alignment="CENTER" prefWidth="200.0">
+                           <children>
+                              <Label prefWidth="100.0" text="slow">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" prefWidth="100.0" text="fest">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Label fx:id="labelSpeed" prefWidth="200.0" textFill="RED" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefWidth="200.0" text="Overflow Mode" />
+                  <CheckBox fx:id="omClickBox" mnemonicParsing="false" onAction="#onClickedBoxAction" prefWidth="200.0" />
+                  <Label fx:id="labelOverflow" prefWidth="200.0" textFill="RED" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="leaveBtn" maxHeight="1.7976931348623157E308" minHeight="50.0" minWidth="150.0" mnemonicParsing="false" onAction="#onFinishBtnClick" text="Leave Without Saving">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
+                     </HBox.margin></Button>
+                  <Button fx:id="saveBtn" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" minHeight="50.0" minWidth="150.0" mnemonicParsing="false" onAction="#onFinishBtnClick" text="Save Settings">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+                     </HBox.margin></Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

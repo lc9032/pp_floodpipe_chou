@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.UserInterfaceController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu fx:id="menuBar" mnemonicParsing="false" text="Menu">
+            <items>
+                  <MenuItem fx:id="menuItemNewGame" mnemonicParsing="false" onAction="#onStartButtonClick" text="New Game" />
+                  <MenuItem fx:id="menuItemLoad" mnemonicParsing="false" onAction="#onLoadBtnClicked" text="Load" />
+                  <MenuItem fx:id="menuItemSave" mnemonicParsing="false" onAction="#onSaveBtnClicked" text="Save" />
+                  <MenuItem fx:id="menuItemEditor" mnemonicParsing="false" onAction="#onEditorBtnClick" text="Editor Mode" />
+                  <MenuItem fx:id="menuItemSetting" mnemonicParsing="false" onAction="#onSettingBtnClick" text="Settings" />
+              <MenuItem fx:id="menuItemExit" mnemonicParsing="false" onAction="#onExitBtnClicked" text="Exit" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <Pane fx:id="centerPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="startBtn" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onStartButtonClick" style="-fx-background-color: white;" text="Start" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
