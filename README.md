@@ -1,4 +1,4 @@
-#Implementing Flood Pipe Puzzle Game Using Java
+# Implementing Flood Pipe Puzzle Game Using Java
 
 This game is implemented using Java, with two main components: a GUI and a logic component. The GUI was created using JavaFX and allows the user to interact with the game board through a graphical interface. The logic component handles the game mechanics, including generating random game boards, checking for win conditions, and filling the pipes algorithmically.
 
